@@ -26,54 +26,60 @@ class Tables extends React.Component {
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>Symbol</th>
-                        <th>LTP</th>
+                        <th>Year</th>
+                        <th>Cash Inflow</th>
                         <th>% Change</th>
-                        <th className="text-center">Value</th>
+                        <th className="text-center">Net Profit</th>
                       </tr>
                     </thead>
                      <tbody>
                       <tr>
-                        <td>AAPL</td>
-                        <td>Niger</td>
+                        <td>2011</td>
+                        <td>$76,738</td>
                         <td>2</td>
                         <td className="text-center">$36,738</td>
                       </tr>
                       <tr>
-                        <td>GOOGL</td>
-                        <td>Curaçao</td>
+                        <td>2012</td>
+                        <td>$96,721</td>
                         <td>12</td>
                         <td className="text-center">$23,789</td>
                       </tr>
                       <tr>
-                        <td>VZ</td>
-                        <td>Netherlands</td>
+                        <td>2013</td>
+                        <td>$38,735</td>
                         <td>-3</td>
-                        <td className="text-center">$56,142</td>
+                        <td className="text-center">$16,142</td>
                       </tr>
                       <tr>
-                        <td>ATT</td>
-                        <td>Korea, South</td>
+                        <td>2014</td>
+                        <td>$63,542</td>
                         <td>6</td>
-                        <td className="text-center">$38,735</td>
-                      </tr>
-                      <tr>
-                        <td>TATA</td>
-                        <td>Malawi</td>
-                        <td>21</td>
                         <td className="text-center">$63,542</td>
                       </tr>
                       <tr>
-                        <td>SBI</td>
-                        <td>Chile</td>
-                        <td>19</td>
-                        <td className="text-center">$78,615</td>
+                        <td>2015</td>
+                        <td>63,542</td>
+                        <td>21</td>
+                        <td className="text-center">$43,992</td>
                       </tr>
                       <tr>
-                        <td>ICICI</td>
-                        <td>Portugal</td>
+                        <td>2016</td>
+                        <td>$78,615</td>
+                        <td>19</td>
+                        <td className="text-center">$58,177</td>
+                      </tr>
+                      <tr>
+                        <td>2017</td>
+                        <td>$63,542</td>
                         <td>11</td>
-                        <td className="text-center">$98,615</td>
+                        <td className="text-center">$48,625</td>
+                      </tr>
+                       <tr>
+                        <td>2018</td>
+                        <td>$93,142</td>
+                        <td>11</td>
+                        <td className="text-center">$38,615</td>
                       </tr>
                     </tbody>
                   </Table>
@@ -83,51 +89,51 @@ class Tables extends React.Component {
             <Col md="12">
               <Card className="card-plain">
                 <CardHeader>
-                  <CardTitle tag="h4">Previous Year Cash Flow</CardTitle>
-                  <p className="category">To estimate the overall trend of the company</p>
+                  <CardTitle tag="h4">Cash Flow Of Competitors</CardTitle>
+                  <p className="category">To estimate the cash flow of competitors in the same industry</p>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
                      <tbody>
                       <tr>
                         <td>AAPL</td>
-                        <td>Niger</td>
+                        <td>$93,142</td>
                         <td>2</td>
                         <td className="text-center">$36,738</td>
                       </tr>
                       <tr>
                         <td>GOOGL</td>
-                        <td>Curaçao</td>
+                        <td>$102,142</td>
                         <td>12</td>
                         <td className="text-center">$23,789</td>
                       </tr>
                       <tr>
                         <td>VZ</td>
-                        <td>Netherlands</td>
+                        <td>$81,142</td>
                         <td>-3</td>
                         <td className="text-center">$56,142</td>
                       </tr>
                       <tr>
                         <td>ATT</td>
-                        <td>Korea, South</td>
+                        <td>$103,243</td>
                         <td>6</td>
                         <td className="text-center">$38,735</td>
                       </tr>
                       <tr>
                         <td>TATA</td>
-                        <td>Malawi</td>
+                        <td>$93,142</td>
                         <td>21</td>
                         <td className="text-center">$63,542</td>
                       </tr>
                       <tr>
                         <td>SBI</td>
-                        <td>Chile</td>
+                        <td>$73,142</td>
                         <td>19</td>
                         <td className="text-center">$78,615</td>
                       </tr>
                       <tr>
                         <td>ICICI</td>
-                        <td>Portugal</td>
+                        <td>$63,140</td>
                         <td>11</td>
                         <td className="text-center">$98,615</td>
                       </tr>

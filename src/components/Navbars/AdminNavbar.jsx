@@ -201,7 +201,7 @@ class AdminNavbar extends React.Component {
           toggle={this.toggleModalSearch}
         >
           <div className="modal-header">
-            <Input id="inlineFormInputGroup" placeholder="SEARCH" type="text" />
+            <Input id="inlineFormInputGroup" placeholder="Search All" type="text" />
             <button
               aria-label="Close"
               className="close"

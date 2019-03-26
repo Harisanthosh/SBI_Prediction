@@ -33,14 +33,14 @@ class UserProfile extends React.Component {
                         <FormGroup>
                           <label>Company (disabled)</label>
                           <Input
-                            defaultValue="Creative Code Inc."
+                            defaultValue="Alpha Alloy Inc."
                             disabled
                             placeholder="Company"
                             type="text"
                           />
                         </FormGroup>
                       </Col>
-                      <Col className="px-md-1" md="3">
+                      {/*<Col className="px-md-1" md="3">
                         <FormGroup>
                           <label>Username</label>
                           <Input
@@ -49,7 +49,7 @@ class UserProfile extends React.Component {
                             type="text"
                           />
                         </FormGroup>
-                      </Col>
+                      </Col>*/}
                       <Col className="pl-md-1" md="4">
                         <FormGroup>
                           <label htmlFor="exampleInputEmail1">
@@ -59,7 +59,7 @@ class UserProfile extends React.Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Row>
+                    {/*<Row>
                       <Col className="pr-md-1" md="6">
                         <FormGroup>
                           <label>First Name</label>
@@ -80,7 +80,7 @@ class UserProfile extends React.Component {
                           />
                         </FormGroup>
                       </Col>
-                    </Row>
+                    </Row>*/}
                     <Row>
                       <Col md="12">
                         <FormGroup>
@@ -108,7 +108,7 @@ class UserProfile extends React.Component {
                         <FormGroup>
                           <label>Country</label>
                           <Input
-                            defaultValue="Andrew"
+                            defaultValue="India"
                             placeholder="Country"
                             type="text"
                           />
@@ -121,7 +121,7 @@ class UserProfile extends React.Component {
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Row>
+                   {/* <Row>
                       <Col md="8">
                         <FormGroup>
                           <label>About Me</label>
@@ -135,7 +135,7 @@ class UserProfile extends React.Component {
                           />
                         </FormGroup>
                       </Col>
-                    </Row>
+                    </Row> */}
                   </Form>
                 </CardBody>
                 <CardFooter>

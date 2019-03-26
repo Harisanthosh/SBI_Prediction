@@ -36,27 +36,47 @@ import {
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+    this.seachByName = this.seachByName.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
-      bigChartData: "data1"
+      bigChartData: "data1",
+      companyName: "",
+      searchName: false
     };
   }
+  seachByName(){
+    console.log("MEthod called");
+    this.setState({
+      bigChartData: "data1",
+      searchName: true
+    })
+  };
+  handleChange(event) {
+    console.log("Inisdeee called");
+    this.setState({companyName: event.target.value});
+    console.log(this.state);
+  };
   setBgChartData = name => {
     this.setState({
-      bigChartData: name
+      bigChartData: name,
+      companyName: "",
+      searchName: true
     });
   };
   render() {
-    return (
-      <>
-        <div className="content">
-          <Row>
+    const finalr = this.state.searchName;
+    console.log("Rerendering");
+    console.log(finalr);
+    let valuecomp;
+    if(finalr) {
+      valuecomp = <div> <Row>
             <Col xs="12">
               <Card className="card-chart">
                 <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
                       <h5 className="card-category">Total Shipments</h5>
-                      <CardTitle tag="h2">Performance</CardTitle>
+                      <CardTitle tag="h2">Performance of {this.state.companyName}</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
@@ -187,9 +207,9 @@ class Dashboard extends React.Component {
             <Col lg="4">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Completed Tasks</h5>
+                  <h5 className="card-category">Growth Rate</h5>
                   <CardTitle tag="h3">
-                    <i className="tim-icons icon-send text-success" /> 12,100K
+                    <i className="tim-icons icon-send text-success" /> +2%
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
@@ -207,7 +227,7 @@ class Dashboard extends React.Component {
             <Col lg="6" md="12">
               <Card className="card-tasks">
                 <CardHeader>
-                  <h6 className="title d-inline">Tweets(5)</h6>
+                  <h6 className="title d-inline">{this.state.companyName} in News</h6>
                   <p className="card-category d-inline"> today</p>
                   <UncontrolledDropdown>
                     <DropdownToggle
@@ -489,43 +509,43 @@ class Dashboard extends React.Component {
                     <tbody>
                       <tr>
                         <td>AAPL</td>
-                        <td>Niger</td>
+                        <td>$93,142</td>
                         <td>2</td>
                         <td className="text-center">$36,738</td>
                       </tr>
                       <tr>
                         <td>GOOGL</td>
-                        <td>Curaçao</td>
+                        <td>$102,142</td>
                         <td>12</td>
                         <td className="text-center">$23,789</td>
                       </tr>
                       <tr>
                         <td>VZ</td>
-                        <td>Netherlands</td>
+                        <td>$81,142</td>
                         <td>-3</td>
                         <td className="text-center">$56,142</td>
                       </tr>
                       <tr>
                         <td>ATT</td>
-                        <td>Korea, South</td>
+                        <td>$103,243</td>
                         <td>6</td>
                         <td className="text-center">$38,735</td>
                       </tr>
                       <tr>
                         <td>TATA</td>
-                        <td>Malawi</td>
+                        <td>$93,142</td>
                         <td>21</td>
                         <td className="text-center">$63,542</td>
                       </tr>
                       <tr>
                         <td>SBI</td>
-                        <td>Chile</td>
+                        <td>$73,142</td>
                         <td>19</td>
                         <td className="text-center">$78,615</td>
                       </tr>
                       <tr>
                         <td>ICICI</td>
-                        <td>Portugal</td>
+                        <td>$63,140</td>
                         <td>11</td>
                         <td className="text-center">$98,615</td>
                       </tr>
@@ -534,7 +554,30 @@ class Dashboard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-          </Row>
+          </Row> </div>;
+    }
+    else {
+      valuecomp = <div></div>;
+    }
+    return (
+      <>
+        <div className="content">
+        <div>
+        <Input id="searchNameComp" placeholder="Search By Company Name" type="text" value={this.state.seachName} onChange={this.handleChange}/>
+            <button
+              aria-label="Close"
+              className="close"
+              type="button"
+              onClick={this.toggleModalSearch}
+            >
+              <i className="tim-icons icon-simple-remove" />
+            </button>
+          <br />
+          <Button className="btn-fill" color="primary" type="submit" onClick={this.seachByName} margin="10 0 0 20">
+                    Go
+            </Button>
+          </div>
+        <div>{valuecomp}</div>
         </div>
       </>
     );
